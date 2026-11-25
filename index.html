@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/bleach-fan-site/assets/index-CLqL6q0b.js"></script>
-    <link rel="stylesheet" crossorigin href="/bleach-fan-site/assets/index-D52-SjbJ.css">
+    <script type="module" crossorigin src="/bleach-fan-site/assets/index-CIlAyFIm.js"></script>
+    <link rel="stylesheet" crossorigin href="/bleach-fan-site/assets/index-CG1bUiuj.css">
   </head>
   <body>
     <a class="skip-link" href="#main">К содержанию</a>
@@ -27,9 +27,19 @@
         <a class="header-official" href="https://www.crunchyroll.com/es/games/card/bleach-soul-resonance">Официальная страница</a>
       </div>
     </header>
+    <nav class="section-dock" aria-label="Быстрый переход по сайту" hidden>
+      <div class="shell section-dock-inner">
+        <a href="#top" aria-label="К началу страницы"><span class="mark" aria-hidden="true"></span></a>
+        <a href="#world" data-dock-section>Карта</a>
+        <a href="#guide" data-dock-section>Гайд</a>
+        <a href="#characters" data-dock-section>Герои</a>
+        <a href="#squad" data-dock-section>Отряд</a>
+        <a href="#gallery" data-dock-section>Видео</a>
+      </div>
+    </nav>
 
     <main id="main" tabindex="-1">
-      <section class="hero" id="top" aria-labelledby="hero-title">
+      <section class="hero" id="top" aria-labelledby="hero-title" tabindex="-1">
         <img class="hero-poster" src="/bleach-fan-site/media/hero-video.webp?v=9718a608" alt="" fetchpriority="high" width="1280" height="720" />
         <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
         <div class="portal-surface" aria-hidden="true"></div>
@@ -81,7 +91,7 @@
                 <h3>Уэко Мундо</h3>
                 <p>Мир пустых и арранкаров. В истории BLEACH Ичиго и его друзья отправляются туда, чтобы спасти Орихимэ.</p>
                 <a class="text-link" href="#orihime-card">Орихимэ Иноуэ</a>
-                <a class="text-link" href="#gallery-portal">Фан-сцена «У порога»</a>
+                <a class="text-link" href="#gallery-dunes">Фан-сцена «Белые дюны»</a>
               </article>
             </div>
           </div>
@@ -129,12 +139,29 @@
             </div>
           </div>
         </div>
-        <a class="text-link" href="https://www.youtube.com/watch?v=7vRsRdUGqqI">Посмотреть бой в официальном трейлере</a>
+        <article class="gameplay-feature" id="gameplay" aria-labelledby="gameplay-title">
+          <div class="gameplay-stage" data-gameplay-stage>
+            <img src="/bleach-fan-site/media/ichigo.webp" alt="" width="480" height="640" loading="lazy" />
+            <button class="button primary" type="button" data-gameplay-play><span class="play-icon" aria-hidden="true"></span>Смотреть игровой фрагмент</button>
+          </div>
+          <div class="gameplay-copy">
+            <h3 id="gameplay-title">Разбор боя</h3>
+            <p>24 секунды игровых кадров из официального трейлера. Когда сам попробуешь связку из гайда, следи за тремя моментами.</p>
+            <ol>
+              <li><strong>Начало атаки.</strong> Подойди к цели и начни серию ударов.</li>
+              <li><strong>Смена героя.</strong> Переключись, пока можешь продолжить атаку.</li>
+              <li><strong>Продолжение комбо.</strong> Подхвати серию способностью нового героя.</li>
+            </ol>
+            <a class="text-link" href="https://www.youtube.com/watch?v=Z38QXzrp5Bg&t=34s">Открыть фрагмент на YouTube</a>
+          </div>
+        </article>
       </section>
 
       <section class="section character-section" id="characters" aria-labelledby="characters-title">
         <div class="shell">
           <div class="section-lead"><h2 id="characters-title">Персонажи</h2><p>Выбери группу или открой карточку, чтобы узнать больше о герое.</p></div>
+          <a class="text-link squad-roster-link" href="#squad">Мой отряд <span data-squad-count>0 из 3</span></a>
+          <p class="squad-alert" data-squad-alert role="status"></p>
           <div class="character-filters" role="group" aria-label="Фильтр персонажей">
             <button class="button secondary" type="button" data-character-filter="all" aria-pressed="true">Все</button>
             <button class="button secondary" type="button" data-character-filter="shinigami" aria-pressed="false">Синигами</button>
@@ -147,6 +174,7 @@
               <img src="/bleach-fan-site/media/ichigo.webp" alt="" loading="lazy" width="480" height="640" />
               <h3><button type="button" aria-expanded="false" aria-controls="ichigo-details"><span><small>Заместитель синигами</small>Ичиго Куросаки</span><i aria-hidden="true"></i></button></h3>
               <div id="ichigo-details" class="character-details" hidden>
+                <button class="squad-toggle" type="button" data-squad-toggle>В отряд</button>
                 <p>После встречи с Рукией Ичиго получает силы синигами. Его дзанпакто — Дзангэцу.</p>
                 <button class="profile-trigger" type="button" aria-label="Полный профиль — Ичиго Куросаки" data-name="Ичиго Куросаки" data-detail="Ичиго видит духов с детства. После встречи с Рукией он защищает близких как заместитель синигами." data-video="https://www.youtube.com/watch?v=Mjffpg6CDe8">Полный профиль</button>
               </div>
@@ -155,6 +183,7 @@
               <img src="/bleach-fan-site/media/rukia.webp" alt="" loading="lazy" width="480" height="640" />
               <h3><button type="button" aria-expanded="false" aria-controls="rukia-details"><span><small>Синигами 13-го отряда</small>Рукия Кучики</span><i aria-hidden="true"></i></button></h3>
               <div id="rukia-details" class="character-details" hidden>
+                <button class="squad-toggle" type="button" data-squad-toggle>В отряд</button>
                 <p>Рукия делится своей силой с Ичиго и открывает ему мир синигами. Её дзанпакто — Содэ-но Сираюки.</p>
                 <button class="profile-trigger" type="button" aria-label="Полный профиль — Рукия Кучики" data-name="Рукия Кучики" data-detail="История её спасения приводит Ичиго и его друзей в Общество душ. Позже Рукия помогает ему вернуть утраченные силы." data-video="https://www.youtube.com/watch?v=z5TIkefj6Qc">Полный профиль</button>
               </div>
@@ -163,6 +192,7 @@
               <img src="/bleach-fan-site/media/byakuya.webp" alt="" loading="lazy" width="480" height="640" />
               <h3><button type="button" aria-expanded="false" aria-controls="byakuya-details"><span><small>Капитан 6-го отряда</small>Бьякуя Кучики</span><i aria-hidden="true"></i></button></h3>
               <div id="byakuya-details" class="character-details" hidden>
+                <button class="squad-toggle" type="button" data-squad-toggle>В отряд</button>
                 <p>Глава клана Кучики и капитан в Обществе душ. Его дзанпакто — Сэнбондзакура.</p>
                 <button class="profile-trigger" type="button" aria-label="Полный профиль — Бьякуя Кучики" data-name="Бьякуя Кучики" data-detail="Кучики входят в число четырёх великих знатных кланов. Бьякуя связан с Рукией через семью и строго относится к своим обязанностям капитана." data-video="https://www.youtube.com/@BleachSR_EN/videos">Полный профиль</button>
               </div>
@@ -171,6 +201,7 @@
               <img src="/bleach-fan-site/media/renji.webp" alt="" loading="lazy" width="480" height="640" />
               <h3><button type="button" aria-expanded="false" aria-controls="renji-details"><span><small>Лейтенант 6-го отряда</small>Рэндзи Абараи</span><i aria-hidden="true"></i></button></h3>
               <div id="renji-details" class="character-details" hidden>
+                <button class="squad-toggle" type="button" data-squad-toggle>В отряд</button>
                 <p>Друг Рукии с детства. Владеет банкаем. Его дзанпакто — Дзабимару.</p>
                 <button class="profile-trigger" type="button" aria-label="Полный профиль — Рэндзи Абараи" data-name="Рэндзи Абараи" data-detail="Он вырос в Руконгае и служит в отряде Бьякуи. Когда Рукии угрожала казнь, Рэндзи объединился с Ичиго, чтобы её спасти." data-video="https://www.youtube.com/watch?v=iHRKCBMCoZ4">Полный профиль</button>
               </div>
@@ -179,6 +210,7 @@
               <img src="/bleach-fan-site/media/uryu.webp" alt="" loading="lazy" width="480" height="640" />
               <h3><button type="button" aria-expanded="false" aria-controls="uryu-details"><span><small>Квинси</small>Урю Исида</span><i aria-hidden="true"></i></button></h3>
               <div id="uryu-details" class="character-details" hidden>
+                <button class="squad-toggle" type="button" data-squad-toggle>В отряд</button>
                 <p>Одноклассник Ичиго и потомок квинси. Изначально соперничал с Ичиго, а затем сражался на его стороне.</p>
                 <button class="profile-trigger" type="button" aria-label="Полный профиль — Урю Исида" data-name="Урю Исида" data-detail="Урю — один из немногих оставшихся квинси. В опубликованном игровом ролике можно увидеть, как он атакует с помощью духовного лука." data-video="https://www.youtube.com/watch?v=trNYBmBRH4s">Полный профиль</button>
               </div>
@@ -187,6 +219,7 @@
               <img src="/bleach-fan-site/media/orihime.webp" alt="" loading="lazy" width="480" height="640" />
               <h3><button type="button" aria-expanded="false" aria-controls="orihime-details"><span><small>Мир живых</small>Орихимэ Иноуэ</span><i aria-hidden="true"></i></button></h3>
               <div id="orihime-details" class="character-details" hidden>
+                <button class="squad-toggle" type="button" data-squad-toggle>В отряд</button>
                 <p>Одноклассница Ичиго. Её сила Сюн Сюн Рикка позволяет защищать товарищей и восстанавливать их после ранений.</p>
                 <button class="profile-trigger" type="button" aria-label="Полный профиль — Орихимэ Иноуэ" data-name="Орихимэ Иноуэ" data-detail="Во время арки об арранкарах Орихимэ оказывается в Уэко Мундо. Ичиго и его друзья отправляются туда за ней." data-video="https://www.youtube.com/watch?v=U_5HJheASJI">Полный профиль</button>
               </div>
@@ -196,8 +229,23 @@
         </div>
       </section>
 
+      <section class="section squad-section" id="squad" aria-labelledby="squad-title">
+        <div class="shell">
+          <div class="section-lead">
+            <h2 id="squad-title">Собери свой отряд</h2>
+            <p>Добавь до трёх героев из каталога. Подборка сохранится в этом браузере.</p>
+          </div>
+          <ol class="squad-slots" aria-label="Состав отряда">
+            <li class="squad-slot" data-squad-slot><img width="480" height="640" alt="" hidden /><span class="squad-slot-index">Место 1</span><strong data-slot-name>Свободно</strong><button class="squad-remove" type="button" hidden>Убрать</button></li>
+            <li class="squad-slot" data-squad-slot><img width="480" height="640" alt="" hidden /><span class="squad-slot-index">Место 2</span><strong data-slot-name>Свободно</strong><button class="squad-remove" type="button" hidden>Убрать</button></li>
+            <li class="squad-slot" data-squad-slot><img width="480" height="640" alt="" hidden /><span class="squad-slot-index">Место 3</span><strong data-slot-name>Свободно</strong><button class="squad-remove" type="button" hidden>Убрать</button></li>
+          </ol>
+          <a class="text-link" href="#characters">Вернуться к персонажам</a>
+        </div>
+      </section>
+
       <section class="shell section gallery-section" id="gallery" aria-labelledby="gallery-title">
-        <div class="section-lead"><h2 id="gallery-title">Галерея</h2><p>Четыре коротких ролика по мотивам мира BLEACH.</p></div>
+        <div class="section-lead"><h2 id="gallery-title">Галерея</h2><p>Портал, ночной город и белые дюны Уэко Мундо в коротких фан-роликах.</p></div>
         <div class="gallery">
           <figure id="gallery-portal">
             <img src="/bleach-fan-site/media/hero.webp" alt="Белый портал над каменной тропой в кобальтовом тумане" loading="lazy" width="1440" height="810" />
@@ -206,6 +254,10 @@
           <figure id="gallery-city">
             <img src="/bleach-fan-site/media/city.webp" alt="Тёмные крыши города под луной и светящийся разлом вдали" loading="lazy" width="1440" height="810" />
             <figcaption><div><span>Фан-визуализация</span><strong>Над крышами</strong></div><button class="button secondary" type="button" data-play="city" aria-label="Смотреть ролик «Над крышами»" hidden><span class="play-icon" aria-hidden="true"></span>Смотреть</button></figcaption>
+          </figure>
+          <figure id="gallery-dunes" class="gallery-dunes">
+            <img src="/bleach-fan-site/media/dunes.webp" alt="Белые песчаные дюны между скалами под полумесяцем" loading="lazy" width="1280" height="720" />
+            <figcaption><div><span>Фан-визуализация · Уэко Мундо</span><strong>Белые дюны</strong></div><button class="button secondary" type="button" data-play="dunes" aria-label="Смотреть ролик «Белые дюны»" hidden><span class="play-icon" aria-hidden="true"></span>Смотреть</button></figcaption>
           </figure>
         </div>
         <h3 class="gallery-subtitle">Ранние версии</h3>
