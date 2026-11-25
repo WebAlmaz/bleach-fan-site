@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/bleach-fan-site/assets/index-DSCA_l2c.js"></script>
-    <link rel="stylesheet" crossorigin href="/bleach-fan-site/assets/index-HuHYJqGp.css">
+    <script type="module" crossorigin src="/bleach-fan-site/assets/index-CLqL6q0b.js"></script>
+    <link rel="stylesheet" crossorigin href="/bleach-fan-site/assets/index-D52-SjbJ.css">
   </head>
   <body>
     <a class="skip-link" href="#main">К содержанию</a>
@@ -30,7 +30,7 @@
 
     <main id="main" tabindex="-1">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <img class="hero-poster" src="/bleach-fan-site/media/hero-video.webp" alt="" fetchpriority="high" width="1280" height="720" />
+        <img class="hero-poster" src="/bleach-fan-site/media/hero-video.webp?v=9718a608" alt="" fetchpriority="high" width="1280" height="720" />
         <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
         <div class="portal-surface" aria-hidden="true"></div>
         <div class="hero-shade"></div>
@@ -235,7 +235,10 @@
 
     <dialog class="video-dialog" aria-labelledby="video-title">
       <div class="dialog-heading"><h2 id="video-title"></h2><button type="button" class="dialog-close" autofocus aria-label="Закрыть">×</button></div>
-      <video controls playsinline preload="none"></video>
+      <div class="video-stage">
+        <video controls playsinline preload="none"></video>
+        <p class="video-loading" role="status" hidden><span aria-hidden="true"></span>Загружается видео…</p>
+      </div>
       <p class="video-error" role="status" hidden>Не удалось воспроизвести видео.</p>
     </dialog>
     <dialog class="profile-dialog" aria-labelledby="profile-title">
